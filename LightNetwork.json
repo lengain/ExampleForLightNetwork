@@ -1,0 +1,246 @@
+{
+  "uuid": "5a572d9c-4fd6-400f-be61-de1ddba98f14",
+  "lastMigration": 32,
+  "name": "LightNetwork",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "aecb39ec-a54a-4150-91c2-54c5be6b12cd",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "goods",
+      "responses": [
+        {
+          "uuid": "403af405-4f9a-4ba0-bda8-7966f1278f71",
+          "body": "{\n  \"code\":\"200\",\n  \"message\":\"请求成功\",\n  \"data\" : {\n    \"name\":\"商品名称\",\n    \"id\" : 1234566,\n  }\n}",
+          "latency": 50,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "4ddb09bb-b184-49d4-9279-da0525d7225c",
+      "type": "http",
+      "documentation": "modify name",
+      "method": "post",
+      "endpoint": "modify",
+      "responses": [
+        {
+          "uuid": "4445de50-d97f-4d9e-b8c9-ee6db4fad033",
+          "body": "{\n  \"code\":\"200\",\n  \"message\":\"修改成功\",\n}",
+          "latency": 2,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "b082069f-d0f1-42ec-9b0c-b0e98cc76099",
+          "body": "{\n  \"code\":\"200\",\n  \"message\":\"修改成功2\",\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "8c1d0372-7ce8-4066-a00f-1457d84b4ba2",
+      "type": "http",
+      "documentation": "delete name",
+      "method": "delete",
+      "endpoint": "delete",
+      "responses": [
+        {
+          "uuid": "1255ce0c-ca5c-4edf-b3f0-17b5e389144a",
+          "body": "{\n  \"code\":\"200\",\n  \"message\":\"删除成功\",\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "3b1ae6ff-b9f3-4a30-adc8-7e3bf9bef5a9",
+      "type": "http",
+      "documentation": "upload image",
+      "method": "post",
+      "endpoint": "uploadimage",
+      "responses": [
+        {
+          "uuid": "6464cba1-cc21-41e6-801c-1afd2b9f4aec",
+          "body": "{\n  \"code\":\"200\",\n  \"message\":\"请求成功\",\n  \"data\" : {\n    \"imageUrl\":\"http://sadasdf.jpg\",\n  }\n}",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "2911fae4-75bb-4550-bc24-6209a4f4aafa",
+      "type": "http",
+      "documentation": "download video",
+      "method": "post",
+      "endpoint": "download",
+      "responses": [
+        {
+          "uuid": "10f5deb8-f391-41d5-886c-b9aadd09f5f5",
+          "body": "{}",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "/Users/tongyulong/Library/Application Support/mockoon/storage/v0200fba0000br0b12rc86dho4dkhrrg.MP4",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "aecb39ec-a54a-4150-91c2-54c5be6b12cd"
+    },
+    {
+      "type": "route",
+      "uuid": "4ddb09bb-b184-49d4-9279-da0525d7225c"
+    },
+    {
+      "type": "route",
+      "uuid": "8c1d0372-7ce8-4066-a00f-1457d84b4ba2"
+    },
+    {
+      "type": "route",
+      "uuid": "3b1ae6ff-b9f3-4a30-adc8-7e3bf9bef5a9"
+    },
+    {
+      "type": "route",
+      "uuid": "2911fae4-75bb-4550-bc24-6209a4f4aafa"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "9c5d6175-5791-4505-a7b9-a4270dcaa939",
+      "id": "p0mh",
+      "name": "New data",
+      "documentation": "",
+      "value": ""
+    },
+    {
+      "uuid": "d58bbcf9-a86a-4f47-b72f-46cebdf62027",
+      "id": "s5qm",
+      "name": "New data",
+      "documentation": "",
+      "value": ""
+    }
+  ],
+  "callbacks": []
+}
