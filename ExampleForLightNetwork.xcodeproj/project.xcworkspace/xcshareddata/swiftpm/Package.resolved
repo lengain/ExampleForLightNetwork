@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/lengain/LightNetwork.git",
       "state" : {
-        "revision" : "d75ca9a2483c1cd18f7c44406e3b5a7a170f3e89",
-        "version" : "1.0.0"
+        "revision" : "71180f8e27297ebd20d2ef0e6f08f1a79740fae5",
+        "version" : "1.0.1"
       }
     }
   ],

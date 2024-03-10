@@ -27,20 +27,16 @@ class ExampleLightInterceptor: LNNetworkInterceptor {
     
     /// insert public parameters
     func interceptor(_ request: LNBaseRequest, parameter: Parameters?) -> Parameters? {
-        if parameter != nil {
-            var para : Dictionary<String, Any> = parameter!;
-            para["test"] = "test"
-            return para
-        }
-        return parameter
+        var para : Dictionary<String, Any> = parameter ?? Dictionary<String, Any>.init()
+        para["public"] = "test"
+        return para
     }
     
     /// insert public headers
     func interceptor(_ request: LNBaseRequest, headerFields: Alamofire.HTTPHeaders?) -> Alamofire.HTTPHeaders? {
         var header = HTTPHeaders();
         headerFields?.dictionary.forEach { header.add(name: $0.key, value: $0.value) }
-        
-        header.add(name: "test", value: "test")
+        header.add(name: "publicHeader", value: "test")
         return header
     }
     
